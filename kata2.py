@@ -8,16 +8,30 @@
 
 # Expected: Day 3: Cycle count, Day 5: Scanner audit, Day 15: FULL AUDIT, Day 30: FULL AUDIT
 
+# Days 1 to 30. range() excludes the end number.
+for day in range(1, 30 + 1):
 
-
-
-for day in range (1, 30 + 1):
+    # 0 means divisible by 3.
     cycle_count = day % 3
-    
+
+    # 0 means divisible by 5.
     scanner_audit = day % 5
 
+    # Both. Checked first so 15 and 30 aren't caught below.
     if cycle_count == 0 and scanner_audit == 0:
         print(f"A full audit is due today, the {day}th")
+
+    # 3 only.
+    elif cycle_count == 0:
+        print(f"A cycle count is due, {day}")
+
+    # 5 only.
+    elif scanner_audit == 0:
+        print(f"A scanner audit is due, {day}")
+
+    # Neither.
+    else:
+        print(f"{day}: Neither a cycle count nor a scanner audit is due")
 
     
 

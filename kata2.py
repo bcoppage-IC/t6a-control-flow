@@ -11,9 +11,14 @@
 
 
 
-for day in range (1, 31):
-    print(day)
-
+for day in range (1, 30 + 1):
     cycle_count = day % 3
+    
+    scanner_audit = day % 5
 
-    scanner_count = day % 5
+    if cycle_count == 0 and scanner_audit == 0:
+        print(f"A full audit is due today, the {day}th")
+
+    
+
+   

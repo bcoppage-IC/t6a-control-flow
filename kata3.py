@@ -11,3 +11,7 @@
 
 for aisle in range(1, 3 + 1):
     print(aisle)
+
+for aisle in range(1, 3 + 1):
+    for shelf in range(1, 4 + 1):
+        print(f"A{aisle}-S{shelf}")

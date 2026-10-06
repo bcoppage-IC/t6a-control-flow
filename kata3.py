@@ -9,9 +9,13 @@
 
 # Stretch: do the other Kata 3 option too.
 
-for aisle in range(1, 3 + 1):
-    print(aisle)
 
+# Aisles 1 to 3.
 for aisle in range(1, 3 + 1):
+
+    # Shelves 1 to 4. end=" " keeps codes on one line.
     for shelf in range(1, 4 + 1):
-        print(f"A{aisle}-S{shelf}")
+        print(f"A{aisle}-S{shelf}", end=" ")
+
+    # New line after each aisle.
+    print()

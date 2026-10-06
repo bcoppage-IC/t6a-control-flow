@@ -3,5 +3,15 @@
 # Expected: Check 1: 15 minutes after shift start … Check 10: 150 minutes after shift start
 
 
+hour = 5
+
+minute = 0
+
 for check in range(1, 11):
-    print(f"Check {check}")
+    minute = minute + 15
+    if minute == 60:
+        minute = 0
+        hour = hour + 1
+
+    print(f"Check {check}: {hour:02d}:{minute:02d}")
+

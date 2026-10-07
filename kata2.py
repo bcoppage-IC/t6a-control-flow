@@ -19,19 +19,19 @@ for day in range(1, 30 + 1):
 
     # Both. Checked first so 15 and 30 aren't caught below.
     if cycle_count == 0 and scanner_audit == 0:
-        print(f"A full audit is due today, the {day}th")
+        print(f"FULL AUDIT DUE, {day}")
 
     # 3 only.
     elif cycle_count == 0:
-        print(f"A cycle count is due, {day}")
+        print(f"CYCLE COUNT DUE, {day}")
 
     # 5 only.
     elif scanner_audit == 0:
-        print(f"A scanner audit is due, {day}")
+        print(f"SCANNER AUDIT DUE, {day}")
 
     # Neither.
     else:
-        print(f"{day}: Neither a cycle count nor a scanner audit is due")
+        print(f"MISSED COUNTS AND AUDITS, {day}")
 
     
 
